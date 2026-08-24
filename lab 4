@@ -1,20 +1,22 @@
-print("******************College Admission Eligibility******************")
+print("***********Traffic Signal Simulation System***********")
 
-num_age = int(input("Enter your age: "))
-num_mark = int(input("Enter your mark: "))
 
-if num_age > 17 and num_age < 25:
-    print("you are eligible for Admission")
-    
-    if num_mark > 60:
-        if num_mark > 80:
-            print("you are eligible for AIML department")
-            
-        elif num_mark < 80:
-            print("you are eligible for CSE department")
-            
-    elif num_mark < 70:
-        print("you are eligible for general")
-        
+signal = input("Enter a signal color: ").lower().strip()
+
+
+if signal == "red":
+    print("Signal is red")
+    print("Action: Stop")
+
+elif signal == "yellow":
+    print("Signal is yellow")
+    print("Action: Get ready")
+
+elif signal == "green":
+    print("Signal is green")
+    print("Action: Go")
+
 else:
-    print("you are not eligible for admission")
+    
+    print(f"Invalid color: '{signal}'")
+    print("Please enter red, yellow, or green.")
